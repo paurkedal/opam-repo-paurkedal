@@ -19,6 +19,7 @@ depends: [
   "oasis"
   "ocaml-xdg-basedir"
   "ocamlfind"
+  "pcre-ocaml"
   "prime"
   "ssl"
   "yojson"
