@@ -1,0 +1,6 @@
+This is an [OPAM][opam] repository for my own software.  It only depends on
+software from the default repository.  You can add it with
+
+    opam repo add paurkedal https://github.com/paurkedal/opam-repo-paurkedal.git
+
+[opam]: http://opam.ocamlpro.com/
