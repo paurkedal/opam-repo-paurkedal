@@ -9,7 +9,7 @@ build: [
   ["ocaml" "setup.ml" "-install"]
 ]
 remove: [
-  ["ocamlfind" "remove" "ocamlbuild-eliom"]
+  ["ocamlfind" "remove" "mediawiki-api"]
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
