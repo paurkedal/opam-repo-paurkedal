@@ -1,0 +1,26 @@
+opam-version: "1"
+maintainer: "paurkedal@gmail.com"
+authors: [ "Petter A. Urkedal" ]
+license: "LGPL-3 with OCaml linking exception"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [
+  ["ocamlfind" "remove" "mediawiki-api"]
+]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+depends: [
+  "cohttp"
+  "kojson"
+  "lwt"
+  "oasis"
+  "ocaml-xdg-basedir"
+  "ocamlfind"
+  "pcre-ocaml"
+  "prime"
+  "ssl"
+  "yojson"
+]
