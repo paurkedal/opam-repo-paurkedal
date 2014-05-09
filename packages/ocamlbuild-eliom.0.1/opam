@@ -13,6 +13,7 @@ remove: [
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
+  "oasis"
   "ocamlfind"
   "pcre-ocaml"
 ]
