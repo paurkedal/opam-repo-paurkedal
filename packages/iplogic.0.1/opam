@@ -10,6 +10,8 @@ build: [
 ]
 remove: [
   ["ocamlfind" "remove" "iplogic"]
+  ["rm" "-f" "%{bin}%/iplogic-compile"]
+  ["rm" "-f" "%{bin}%/iplogic-depend"]
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
