@@ -1,0 +1,20 @@
+opam-version: "1"
+maintainer: "paurkedal@gmail.com"
+authors: [ "Petter A. Urkedal" ]
+license: "LGPL-3"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [
+  ["ocamlfind" "remove" "episql"]
+  ["rm" "-f" "%{bin}%/episql"]
+]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+depends: [
+  "prime"
+]
+depopts: [
+]
