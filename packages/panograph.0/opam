@@ -1,0 +1,22 @@
+opam-version: "1"
+maintainer: "paurkedal@gmail.com"
+authors: [ "Petter A. Urkedal" ]
+license: "LGPL-3 with OCaml linking exception"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [
+  ["ocamlfind" "remove" "panograph"]
+]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+depends: [
+  "eliom"
+  "js_of_ocaml"
+  "lwt"
+  "prime"
+]
+depopts: [
+]
