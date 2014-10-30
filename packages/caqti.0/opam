@@ -1,0 +1,30 @@
+opam-version: "1"
+maintainer: "paurkedal@gmail.com"
+authors: [ "Petter A. Urkedal" ]
+license: "LGPL-3 with OCaml linking exception"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix
+    "--%{postgresql-ocaml:enable}%-postgresql"
+    "--%{sqlite3-ocaml:enable}%-sqlite3"
+    "--%{lwt:enable}%-lwt"
+    "--%{async:enable}%-async"
+  ]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [
+  ["ocamlfind" "remove" "caqti"]
+]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+depends: [
+  "calendar"
+  "ocamlfind"
+  "lwt"
+  "oasis"
+  "uri"
+]
+depopts: [
+  "postgresql-ocaml"
+  "sqlite3-ocaml"
+]
