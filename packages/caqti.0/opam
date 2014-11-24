@@ -5,8 +5,8 @@ license: "LGPL-3 with OCaml linking exception"
 build: [
   ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix
-    "--%{postgresql-ocaml:enable}%-postgresql"
-    "--%{sqlite3-ocaml:enable}%-sqlite3"
+    "--%{postgresql:enable}%-postgresql"
+    "--%{sqlite3:enable}%-sqlite3"
     "--%{lwt:enable}%-lwt"
     "--%{async:enable}%-async"
   ]
@@ -25,6 +25,6 @@ depends: [
   "uri"
 ]
 depopts: [
-  "postgresql-ocaml"
-  "sqlite3-ocaml"
+  "postgresql"
+  "sqlite3"
 ]
