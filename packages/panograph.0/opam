@@ -9,6 +9,8 @@ build: [
   ["ocaml" "setup.ml" "-install"]
 ]
 remove: [
+  ["ocamlfind" "remove" "panograph-client"]
+  ["ocamlfind" "remove" "panograph-server"]
   ["ocamlfind" "remove" "panograph"]
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
