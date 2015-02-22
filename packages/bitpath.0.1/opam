@@ -18,3 +18,4 @@ depends: [
 ]
 depopts: [
 ]
+dev-repo: "https://github.com/paurkedal/ocaml-bitpath.git"

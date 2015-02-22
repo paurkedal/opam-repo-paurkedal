@@ -25,3 +25,4 @@ depends: [
   "ssl"
   "yojson"
 ]
+dev-repo: "https://github.com/paurkedal/ocaml-mediawiki-api.git"

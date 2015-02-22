@@ -21,3 +21,4 @@ depends: [
 ]
 depopts: [
 ]
+dev-repo: "https://github.com/paurkedal/iplogic.git"

@@ -24,3 +24,4 @@ depopts: [
   "extunix"
   "react"
 ]
+dev-repo: "https://github.com/paurkedal/episql.git"

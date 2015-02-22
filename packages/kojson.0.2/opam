@@ -18,3 +18,4 @@ depends: [
   "prime"
   "yojson"
 ]
+dev-repo: "https://github.com/paurkedal/ocaml-kojson.git"
