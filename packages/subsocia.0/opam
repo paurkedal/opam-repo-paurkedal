@@ -19,6 +19,7 @@ depends: [
   "extunix"
   "lwt"
   "prime"
+  "rpc"
 ]
 depopts: [
 ]
