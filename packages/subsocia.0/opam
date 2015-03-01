@@ -10,6 +10,7 @@ build: [
 ]
 remove: [
   ["ocamlfind" "remove" "subsocia"]
+  ["ocamlfind" "remove" "subsocia-server"]
   ["ocamlfind" "remove" "subsocia-web"]
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
