@@ -1,0 +1,13 @@
+opam-version: "1"
+maintainer: "paurkedal@gmail.com"
+homepage: "https://github.com/ermine/xml"
+license: "BSD3"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+build-test: [["ocaml" "setup.ml" "-test"]]
+remove: [["ocamlfind" "remove" "erm_xml"]]
+depends: ["ocamlfind"]
+dev-repo: "https://github.com/ermine/xml.git"

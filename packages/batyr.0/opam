@@ -1,0 +1,24 @@
+opam-version: "1"
+maintainer: "paurkedal@gmail.com"
+authors: [ "Petter A. Urkedal" ]
+license: "GPL-3"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [
+  ["ocamlfind" "remove" "batyr"]
+  ["rm" "-rf" "%{share}%/batyr/static"]
+]
+depends: [
+  "calendar"
+  "config-file"
+  "eliom"
+  "erm_xmpp"
+  "lwt"
+  "oasis"
+  "postgresql"
+  "prime"
+]
