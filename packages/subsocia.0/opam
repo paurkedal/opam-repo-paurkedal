@@ -12,6 +12,8 @@ remove: [
   ["ocamlfind" "remove" "subsocia"]
   ["ocamlfind" "remove" "subsocia-server"]
   ["ocamlfind" "remove" "subsocia-web"]
+  ["rm" "-rf" "%{bin}%/subsocia"]
+  ["rm" "-rf" "%{share}%/subsocia/schema"]
   ["rm" "-rf" "%{share}%/subsocia/static"]
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
