@@ -19,9 +19,12 @@ remove: [
 build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
   "caqti"
+  "cmdliner"
+  "config-file"
   "eliom"
   "extunix"
   "lwt"
+  "panograph"
   "prime"
   "rpc"
 ]
