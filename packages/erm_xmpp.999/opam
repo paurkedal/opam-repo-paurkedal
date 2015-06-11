@@ -1,0 +1,19 @@
+opam-version: "1"
+maintainer: "paurkedal@gmail.com"
+homepage: "https://github.com/ermine/xmpp"
+license: "BSD3"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [["ocamlfind" "remove" "erm_xmpp"]]
+depends: [
+  "camlp4"
+  "cstruct"
+  "erm_treap"
+  "erm_xml" {>= "0.3"}
+  "nocrypto"
+  "ocamlfind"
+  "tls"
+]
