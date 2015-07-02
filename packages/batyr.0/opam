@@ -14,6 +14,7 @@ remove: [
 ]
 depends: [
   "calendar"
+  "caqti"
   "config-file"
   "eliom"
   "erm_xmpp"
