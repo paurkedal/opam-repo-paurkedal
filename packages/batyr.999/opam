@@ -22,4 +22,5 @@ depends: [
   "oasis"
   "postgresql"
   "prime"
+  "tls"
 ]
