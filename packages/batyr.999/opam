@@ -18,9 +18,11 @@ depends: [
   "config-file"
   "eliom"
   "erm_xmpp"
+  "extunix"
   "lwt"
   "oasis"
   "postgresql"
   "prime"
   "tls"
 ]
+dev-repo: "git://github.com/paurkedal/batyr.git"
