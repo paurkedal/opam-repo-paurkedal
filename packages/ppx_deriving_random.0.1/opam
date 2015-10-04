@@ -1,0 +1,22 @@
+opam-version: "1.2"
+name: "ppx_deriving_random"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+homepage: "https://github.com/paurkedal/ppx_deriving_random"
+bug-reports: "https://github.com/paurkedal/ppx_deriving_random/issues"
+license: "LGPL-3.0 with OCaml linking exception"
+dev-repo: "https://github.com/paurkedal/ppx_deriving_random.git"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [
+  ["ocamlfind" "remove" "ppx_deriving_random"]
+]
+depends: [
+  "ocamlfind" {build}
+  "ppx_deriving"
+  "ppx_tools"
+]
