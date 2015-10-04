@@ -9,9 +9,9 @@ build: [
   ["ocaml" "setup.ml" "-install"]
 ]
 remove: [
-  ["ocamlfind" "remove" "subsocia"]
-  ["ocamlfind" "remove" "subsocia-server"]
   ["ocamlfind" "remove" "subsocia-web"]
+  ["ocamlfind" "remove" "subsocia-server"]
+  ["ocamlfind" "remove" "subsocia"]
   ["rm" "-f" "%{bin}%/subsocia"]
   ["rm" "-rf" "%{share}%/subsocia/schema"]
   ["rm" "-rf" "%{share}%/subsocia/static"]
@@ -27,7 +27,5 @@ depends: [
   "panograph"
   "prime"
   "rpc"
-]
-depopts: [
 ]
 dev-repo: "https://github.com/paurkedal/subsocia.git"
