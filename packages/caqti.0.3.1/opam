@@ -19,8 +19,8 @@ remove: [
 build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
   "calendar"
-  "ocamlfind"
-  "oasis"
+  "ocamlfind" {build}
+  "oasis" {build}
   "uri"
 ]
 depopts: [

@@ -17,6 +17,8 @@ remove: [
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
+  "oasis" {build}
+  "ocamlfind" {build}
   "prime"
   "xmlm"
 ]

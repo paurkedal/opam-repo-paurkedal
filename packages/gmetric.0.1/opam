@@ -14,6 +14,10 @@ remove: [
   ["ocamlfind" "remove" "gmetric"]
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
+depends: [
+  "oasis" {build}
+  "ocamlfind" {build}
+]
 depopts: [
   "lwt"
 ]

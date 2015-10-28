@@ -20,7 +20,8 @@ depends: [
   "erm_xmpp"
   "extunix"
   "lwt"
-  "oasis"
+  "oasis" {build}
+  "ocamlfind" {build}
   "postgresql"
   "prime"
   "tls"

@@ -16,9 +16,9 @@ depends: [
   "cohttp"
   "kojson"
   "lwt"
-  "oasis"
+  "oasis" {build}
   "ocaml-xdg-basedir"
-  "ocamlfind"
+  "ocamlfind" {build}
   "pcre"
   "prime"
   "ssl"

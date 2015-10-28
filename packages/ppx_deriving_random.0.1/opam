@@ -16,6 +16,7 @@ remove: [
   ["ocamlfind" "remove" "ppx_deriving_random"]
 ]
 depends: [
+  "oasis" {build}
   "ocamlfind" {build}
   "ppx_deriving"
   "ppx_tools"

@@ -16,6 +16,8 @@ remove: [
 build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
   "bitpath"
+  "oasis" {build}
+  "ocamlfind" {build}
   "pcre"
   "prime"
 ]

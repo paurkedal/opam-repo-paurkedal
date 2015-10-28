@@ -14,6 +14,7 @@ remove: [
 depends: [
   "config-file"
   "eliom"
-  "oasis"
+  "oasis" {build}
+  "ocamlfind" {build}
   "prime"
 ]

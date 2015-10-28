@@ -19,6 +19,8 @@ depends: [
   "eliom"
   "js_of_ocaml"
   "lwt"
+  "oasis" {build}
+  "ocamlfind" {build}
   "prime"
 ]
 depopts: [

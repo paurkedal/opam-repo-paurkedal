@@ -24,6 +24,8 @@ depends: [
   "eliom"
   "extunix"
   "lwt"
+  "oasis" {build}
+  "ocamlfind" {build}
   "panograph"
   "prime"
   "rpc"
