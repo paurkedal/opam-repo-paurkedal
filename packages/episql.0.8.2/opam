@@ -20,6 +20,7 @@ depends: [
   "oasis" {build}
   "ocamlfind" {build}
   "prime"
+  "xmlm"
 ]
 depopts: [
   "caqti"
