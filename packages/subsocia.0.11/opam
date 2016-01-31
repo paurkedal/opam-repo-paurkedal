@@ -21,12 +21,12 @@ depends: [
   "caqti"
   "cmdliner"
   "config-file"
-  "eliom" {<"5.0"}
+  "eliom" {>="5.0"}
   "extunix"
   "lwt"
   "oasis" {build}
   "ocamlfind" {build}
-  "panograph" {<"0.3"}
+  "panograph" {>="0.3"}
   "prime"
   "rpc"
 ]
