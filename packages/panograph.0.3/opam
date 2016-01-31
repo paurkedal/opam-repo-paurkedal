@@ -16,7 +16,7 @@ remove: [
 ]
 build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
-  "eliom" {<"5.0"}
+  "eliom" {>="5.0"}
   "js_of_ocaml"
   "lwt"
   "oasis" {build}
