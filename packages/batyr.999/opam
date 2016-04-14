@@ -27,4 +27,4 @@ depends: [
   "tls"
   "yojson"
 ]
-dev-repo: "git://github.com/paurkedal/batyr.git"
+dev-repo: "git://github.com/paurkedal/batyr.git#next"
