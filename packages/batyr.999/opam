@@ -25,5 +25,6 @@ depends: [
   "postgresql"
   "prime"
   "tls"
+  "yojson"
 ]
 dev-repo: "git://github.com/paurkedal/batyr.git"
