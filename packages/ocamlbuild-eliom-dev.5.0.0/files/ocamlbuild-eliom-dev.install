@@ -1,0 +1,8 @@
+lib: [
+  "META"
+  "_build/ocamlbuild_eliom.cmi"
+  "_build/ocamlbuild_eliom.cma"
+  "_build/ocamlbuild_eliom.cmxa"
+  "_build/ocamlbuild_eliom.a"
+  "_build/ocamlbuild_eliom.cmxs"
+]
