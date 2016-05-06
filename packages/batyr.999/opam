@@ -16,12 +16,13 @@ depends: [
   "calendar"
   "caqti"
   "config-file"
-  "eliom"
+  "eliom" {>= "5.0.0" & < "6.0.0"}
   "erm_xmpp"
   "extunix"
   "lwt"
   "oasis" {build}
   "ocamlfind" {build}
+  "ocamlbuild-eliom-dev" {build}
   "postgresql"
   "prime"
   "tls"
