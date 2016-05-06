@@ -1,0 +1,29 @@
+opam-version: "1"
+maintainer: "paurkedal@gmail.com"
+authors: [ "Petter A. Urkedal" ]
+license: "LGPL-3 with OCaml linking exception"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [
+  ["ocamlfind" "remove" "panograph-client"]
+  ["ocamlfind" "remove" "panograph-server"]
+  ["ocamlfind" "remove" "panograph"]
+  ["rm" "-rf" "%{share}%/panograph/static"]
+]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+depends: [
+  "eliom" {>= "5.0.0" & < "6.0.0"}
+  "ocamlbuild-eliom-dev" {build}
+  "js_of_ocaml"
+  "lwt"
+  "oasis" {build}
+  "ocamlfind" {build}
+  "prime"
+]
+depopts: [
+]
+dev-repo: "https://github.com/paurkedal/panograph.git"
