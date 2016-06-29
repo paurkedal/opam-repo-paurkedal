@@ -12,6 +12,7 @@ remove: [
   ["rm" "-rf" "%{share}%/batyr/static"]
 ]
 depends: [
+  "adpkg" {build}
   "calendar"
   "caqti"
   "config-file"

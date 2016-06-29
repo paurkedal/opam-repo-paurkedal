@@ -9,5 +9,5 @@ dev-repo: "https://github.com/paurkedal/adpkg.git"
 build: [ocaml "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
   "ocamlbuild" {build}
-  "topkg" {build}
+  "topkg"
 ]
