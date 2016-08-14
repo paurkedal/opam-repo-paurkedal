@@ -1,0 +1,26 @@
+opam-version: "1.2"
+maintainer: "paurkedal@gmail.com"
+authors: "Petter A. Urkedal"
+homepage: "https://github.com/paurkedal/subsocia/"
+bug-reports: "https://github.com/paurkedal/subsocia/issues"
+license: "LGPL-3 with OCaml linking exception"
+dev-repo: "https://github.com/paurkedal/subsocia.git"
+build: [ocaml "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
+depends: [
+  "adpkg" {build}
+  "caqti"
+  "cmdliner"
+  "config-file"
+  "eliom"
+  "extunix"
+  "lwt"
+  "ocamlbuild" {build}
+  "ounit"
+  "panograph"
+  "prime"
+  "react"
+  "rpc"
+  "topkg" {build}
+  "uri"
+  "yojson"
+]
