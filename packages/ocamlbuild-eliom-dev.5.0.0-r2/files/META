@@ -1,0 +1,7 @@
+description = "Transient package with development version of Eliom ocamlbuild plugin"
+version = "5.0.0"
+requires = "js_of_ocaml.ocamlbuild"
+archive(byte) = "ocamlbuild_eliom.cma"
+archive(byte, plugin) = "ocamlbuild_eliom.cma"
+archive(native) = "ocamlbuild_eliom.cmxa"
+archive(native, plugin) = "ocamlbuild_eliom.cmxs"
