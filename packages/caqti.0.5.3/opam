@@ -9,7 +9,7 @@ build: [[
   "ocaml"
   "pkg/pkg.ml"
   "build"
-  "--dev-pkg"
+  "--pinned"
   "%{pinned}%"
   "--with-async"
   async:installed
