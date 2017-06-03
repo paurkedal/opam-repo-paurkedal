@@ -10,7 +10,7 @@ depends: [
   "calendar"
   "cmdliner"
   "cohttp"
-  "conduit"
+  "conduit" {< "0.15.4"}
   "kojson"
   "lwt"
   "ocaml-xdg-basedir"
