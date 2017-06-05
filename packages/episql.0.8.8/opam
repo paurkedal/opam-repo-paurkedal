@@ -24,7 +24,7 @@ depends: [
   "xmlm"
 ]
 depopts: [
-  "caqti"
+  "caqti" {< "0.6"}
   "extunix"
   "react"
 ]

@@ -14,7 +14,7 @@ remove: [
 depends: [
   "adpkg" {build}
   "calendar"
-  "caqti"
+  "caqti" {< "0.6"}
   "config-file"
   "eliom" {>= "5.0.0" & < "6.0.0"}
   "erm_xmpp"
