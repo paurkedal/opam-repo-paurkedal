@@ -18,3 +18,4 @@ depends: [
   "ocamlfind"
   "uri"
 ]
+available: [ocaml-version >= "4.04.0"]

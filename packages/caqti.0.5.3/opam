@@ -30,3 +30,4 @@ depends: [
   "uri"
 ]
 depopts: ["async" "core" "lwt" "mariadb" "postgresql" "sqlite3"]
+available: [ocaml-version >= "4.04.0"]

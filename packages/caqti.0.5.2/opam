@@ -29,3 +29,4 @@ depopts: [
   "postgresql"
   "sqlite3"
 ]
+available: [ocaml-version >= "4.04.0"]
