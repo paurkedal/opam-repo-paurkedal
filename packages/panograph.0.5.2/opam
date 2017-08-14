@@ -1,0 +1,21 @@
+opam-version: "1.2"
+maintainer: "paurkedal@gmail.com"
+authors: "Petter A. Urkedal"
+homepage: "https://github.com/paurkedal/panograph/"
+bug-reports: "https://github.com/paurkedal/panograph/issues"
+license: "LGPL-3 with OCaml linking exception"
+dev-repo: "https://github.com/paurkedal/panograph.git"
+build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
+depends: [
+  "adpkg" {build}
+  "eliom" {>= "6.0" & < "7.0"}
+  "js_of_ocaml"
+  "lwt"
+  "ocamlbuild" {build}
+  "ocamlfind" {build}
+  "ppx_compose" {build}
+  "ppx_deriving" {build}
+  "prime"
+  "react"
+  "topkg" {build}
+]
