@@ -1,0 +1,19 @@
+opam-version: "1.2"
+maintainer: "paurkedal@gmail.com"
+authors: "Petter A. Urkedal"
+homepage: "https://github.com/paurkedal/inhca/"
+bug-reports: "https://github.com/paurkedal/inhca/issues"
+license: "GPL-3"
+dev-repo: "https://github.com/paurkedal/inhca.git"
+build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
+depends: [
+  "adpkg" {build}
+  "calendar"
+  "config-file"
+  "eliom" {>= "6.0.0" & < "7~"}
+  "fd-send-recv"
+  "ocamlfind" {build}
+  "prime"
+  "topkg" {build}
+  "x509"
+]
