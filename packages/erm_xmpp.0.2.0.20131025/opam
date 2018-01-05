@@ -9,9 +9,10 @@ build: [
 ]
 remove: [["ocamlfind" "remove" "erm_xmpp"]]
 depends: [
-  "ocamlfind"
   "erm_xml" {>= "0.3"}
   "cryptokit" {>= "1.5"}
   "camlp4"
+  "ocamlbuild" {build}
+  "ocamlfind" {build}
 ]
 dev-repo: "git://github.com/paurkedal/erm_xmpp.git#next"
