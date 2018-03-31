@@ -12,7 +12,7 @@ depends: [
   "camlp4"
   "cstruct"
   "erm_treap"
-  "erm_xml" {>= "0.3"}
+  "erm_xml"
   "nocrypto"
   "ocamlbuild" {build}
   "ocamlfind" {build}
