@@ -1,20 +1,21 @@
-opam-version: "1"
-maintainer: "paurkedal@gmail.com"
+opam-version: "1.2"
+name: "erm_xmpp"
+author: "Anastasia Gornostaeva <ermine@sulci.ru>"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
 homepage: "https://github.com/ermine/xmpp"
+dev-repo: "https://github.com/paurkedal/erm_xmpp.git#dev"
 license: "BSD3"
-build: [
-  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
-  ["ocaml" "setup.ml" "-build"]
-  ["ocaml" "setup.ml" "-install"]
-]
-remove: [["ocamlfind" "remove" "erm_xmpp"]]
+
+build: ["dune" "build" "-p" name "-j" jobs]
+build-test: ["dune" "runtest" "-p" name "-j" jobs]
+
 depends: [
-  "camlp4"
   "cstruct"
-  "erm_treap"
+  "dune" {build}
+  #"erm_treap" {test}
   "erm_xml"
-  "nocrypto"
-  "ocamlbuild" {build}
+  "lwt" {test}
   "ocamlfind" {build}
-  "tls"
+  "nocrypto"
+  #"tls" {test}
 ]

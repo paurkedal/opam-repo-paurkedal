@@ -1,13 +1,17 @@
-opam-version: "1"
-maintainer: "paurkedal@gmail.com"
+opam-version: "1.2"
+name: "erm_xml"
+author: "Anastasia Gornostaeva <ermine@sulci.ru>"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
 homepage: "https://github.com/ermine/xml"
+dev-repo: "https://github.com/paurkedal/erm_xml.git#dev"
 license: "BSD3"
-build: [
-  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
-  ["ocaml" "setup.ml" "-build"]
-  ["ocaml" "setup.ml" "-install"]
+
+build: ["dune" "build" "-p" name "-j" jobs]
+build-test: ["dune" "runtest" "-p" name "-j" jobs]
+
+depends: [
+  "dune" {build}
+  "lwt" {test}
+  "ocamlfind" {build}
+  "text" {test}
 ]
-build-test: [["ocaml" "setup.ml" "-test"]]
-remove: [["ocamlfind" "remove" "erm_xml"]]
-depends: ["ocamlfind"]
-dev-repo: "https://github.com/ermine/xml.git"
