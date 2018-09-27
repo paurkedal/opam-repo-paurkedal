@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: [ "Petter A. Urkedal" ]
 license: "LGPL-3.0 with OCaml linking exception"
@@ -7,15 +7,22 @@ build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
+  ["ocaml" "setup.ml" "-doc"] {with-doc}
 ]
 remove: [
   ["ocamlfind" "remove" "kojson"]
 ]
-build-doc: [ "ocaml" "setup.ml" "-doc" ]
 depends: [
+  "ocaml"
   "oasis" {build}
   "ocamlfind" {build}
   "prime"
   "yojson"
 ]
-dev-repo: "https://github.com/paurkedal/ocaml-kojson.git"
+dev-repo: "git+https://github.com/paurkedal/ocaml-kojson.git"
+synopsis: "Combinators for matching JSON"
+flags: light-uninstall
+url {
+  src: "https://codeload.github.com/paurkedal/ocaml-kojson/tar.gz/0.2"
+  checksum: "md5=a4d9463b40fc1e4a7c4d725a500d5546"
+}

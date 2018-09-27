@@ -1,12 +1,13 @@
-opam-version: "1.2"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: "Petter A. Urkedal"
 homepage: "https://github.com/paurkedal/ocaml-mediawiki-api/"
 bug-reports: "https://github.com/paurkedal/ocaml-mediawiki-api/issues"
 license: "LGPL-3 with OCaml linking exception"
-dev-repo: "https://github.com/paurkedal/ocaml-mediawiki-api.git"
+dev-repo: "git+https://github.com/paurkedal/ocaml-mediawiki-api.git"
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
+  "ocaml"
   "calendar"
   "cmdliner"
   "cohttp"
@@ -22,3 +23,9 @@ depends: [
   "topkg" {build}
   "yojson"
 ]
+synopsis: "MediaWiki API for OCaml"
+url {
+  src:
+    "https://github.com/paurkedal/ocaml-mediawiki-api/releases/download/v0.5.4/mediawiki-api-0.5.4.tbz"
+  checksum: "md5=e3f98509ce4f1466021ba2738ea3b91d"
+}

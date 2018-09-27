@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: [ "Anastasia Gornostaeva" ]
 license: "BSD3"
@@ -7,13 +7,14 @@ build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
+  ["ocaml" "setup.ml" "-doc"] {with-doc}
 ]
 remove: [
   ["ocamlfind" "remove" "erm_treap"]
 ]
-build-doc: ["ocaml" "setup.ml" "-doc"]
-depends: [
-  "oasis"
-]
-depopts: [
-]
+depends: ["ocaml" "oasis"]
+synopsis: "Treap implementation"
+flags: light-uninstall
+url {
+  src: "git://github.com/ermine/treap.git"
+}

@@ -1,22 +1,28 @@
-opam-version: "1"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: [ "Petter A. Urkedal" ]
 license: "LGPL-3"
 build: [
   ["oasis" "setup"]
-  ["ocaml" "setup.ml" "-configure" "--prefix" prefix
+  [
+    "ocaml"
+    "setup.ml"
+    "-configure"
+    "--prefix"
+    prefix
     "--disable-caqti-persist"
-      {! caqti:installed | ! extunix:installed | ! episql:installed}
+      {!caqti:installed | !extunix:installed | !episql:installed}
   ]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
+  ["ocaml" "setup.ml" "-doc"] {with-doc}
 ]
 remove: [
   ["ocamlfind" "remove" "episql"]
   ["rm" "-f" "%{bin}%/episql"]
 ]
-build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
+  "ocaml"
   "oasis" {build}
   "ocamlfind" {build}
   "prime"
@@ -28,4 +34,10 @@ depopts: [
   "extunix"
   "react"
 ]
-dev-repo: "https://github.com/paurkedal/episql.git"
+dev-repo: "git+https://github.com/paurkedal/episql.git"
+synopsis: "Tool to derive code from SQL schemas"
+flags: light-uninstall
+url {
+  src: "https://codeload.github.com/paurkedal/episql/tar.gz/0.8.8"
+  checksum: "md5=d25bed9ab6c6a097c8b6033a99e300a2"
+}

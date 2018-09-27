@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: [ "Petter A. Urkedal" ]
 license: "GPL-3"
@@ -13,10 +13,17 @@ remove: [
   ["rm" "-rf" "%{share}%/inhca"]
 ]
 depends: [
+  "ocaml"
   "config-file"
   "eliom"
   "oasis" {build}
   "ocamlfind" {build}
   "prime"
 ]
-dev-repo: "https://github.com/paurkedal/inhca.git"
+dev-repo: "git+https://github.com/paurkedal/inhca.git"
+synopsis: "In-House CA"
+flags: light-uninstall
+url {
+  src: "https://codeload.github.com/paurkedal/inhca/tar.gz/0.2"
+  checksum: "md5=2aad0591403208c6edd33ebc0d44b492"
+}

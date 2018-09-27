@@ -1,11 +1,11 @@
-opam-version: "1.2"
+opam-version: "2.0"
 name: "ppx_deriving_random"
 maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
 authors: "Petter A. Urkedal <paurkedal@gmail.com>"
 homepage: "https://github.com/paurkedal/ppx_deriving_random"
 bug-reports: "https://github.com/paurkedal/ppx_deriving_random/issues"
 license: "LGPL-3.0 with OCaml linking exception"
-dev-repo: "https://github.com/paurkedal/ppx_deriving_random.git"
+dev-repo: "git+https://github.com/paurkedal/ppx_deriving_random.git"
 build: [
   ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
@@ -16,8 +16,15 @@ remove: [
   ["ocamlfind" "remove" "ppx_deriving_random"]
 ]
 depends: [
+  "ocaml"
   "oasis" {build}
   "ocamlfind" {build}
   "ppx_deriving"
   "ppx_tools"
 ]
+synopsis: "Syntax extension to generate random instances of types"
+flags: light-uninstall
+url {
+  src: "https://codeload.github.com/paurkedal/ppx_deriving_random/tar.gz/0.1"
+  checksum: "md5=80940689bcf7dd1487b0d6f50474eea7"
+}

@@ -1,12 +1,13 @@
-opam-version: "1.2"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: "Petter A. Urkedal"
 homepage: "https://github.com/paurkedal/panograph/"
 bug-reports: "https://github.com/paurkedal/panograph/issues"
 license: "LGPL-3 with OCaml linking exception"
-dev-repo: "https://github.com/paurkedal/panograph.git"
+dev-repo: "git+https://github.com/paurkedal/panograph.git"
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
+  "ocaml"
   "adpkg" {build}
   "eliom" {>= "6.0" & < "7.0"}
   "js_of_ocaml"
@@ -19,3 +20,9 @@ depends: [
   "react"
   "topkg" {build}
 ]
+synopsis: "An Assortment of Eliom Widgets"
+url {
+  src:
+    "https://github.com/paurkedal/panograph/releases/download/v0.5.2/panograph-0.5.2.tbz"
+  checksum: "md5=5365bc83c73f6a38c486420fb24fbdac"
+}

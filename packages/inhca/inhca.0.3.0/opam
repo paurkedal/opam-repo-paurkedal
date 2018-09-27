@@ -1,12 +1,13 @@
-opam-version: "1.2"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: "Petter A. Urkedal"
 homepage: "https://github.com/paurkedal/inhca/"
 bug-reports: "https://github.com/paurkedal/inhca/issues"
 license: "GPL-3"
-dev-repo: "https://github.com/paurkedal/inhca.git"
+dev-repo: "git+https://github.com/paurkedal/inhca.git"
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
+  "ocaml"
   "adpkg" {build}
   "config-file"
   "eliom"
@@ -15,3 +16,9 @@ depends: [
   "prime"
   "topkg" {build}
 ]
+synopsis: "# In-House CA"
+url {
+  src:
+    "https://github.com/paurkedal/inhca/releases/download/0.3.0/inhca-0.3.0.tbz"
+  checksum: "md5=0e563650672800029a48144df75d5963"
+}

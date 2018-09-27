@@ -1,10 +1,10 @@
-opam-version: "1.2"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: "Petter A. Urkedal"
 homepage: "https://github.com/paurkedal/ocaml-caqti/"
 bug-reports: "https://github.com/paurkedal/ocaml-caqti/issues"
 license: "LGPL-3 with OCaml linking exception"
-dev-repo: "https://github.com/paurkedal/ocaml-caqti.git"
+dev-repo: "git+https://github.com/paurkedal/ocaml-caqti.git"
 build: [[
   "ocaml"
   "pkg/pkg.ml"
@@ -23,6 +23,7 @@ build: [[
   sqlite3:installed
 ]]
 depends: [
+  "ocaml" {>= "4.04.0"}
   "calendar"
   "ocamlbuild" {build}
   "ocamlfind"
@@ -30,4 +31,16 @@ depends: [
   "uri"
 ]
 depopts: ["async" "core" "lwt" "mariadb" "postgresql" "sqlite3"]
-available: [ocaml-version >= "4.04.0"]
+synopsis: "Cooperative-threaded access to relational data"
+description: """
+Caqti is an library providing a common API to SQL databases and similar data
+interfaces.  The assumption is that the data service is queried by passing a
+string along with typed parameters, and responds with a sequence of typed
+tuples.
+Caqti may be used directly or to provide multi-database support to
+higher-level solutions, like code generators and syntax extensions."""
+url {
+  src:
+    "https://github.com/paurkedal/ocaml-caqti/releases/download/v0.5.3/caqti-0.5.3.tbz"
+  checksum: "md5=7432cbd2e1ef1787d53254c2e7f65901"
+}

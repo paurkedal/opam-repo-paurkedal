@@ -1,13 +1,24 @@
-opam-version: "1.2"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: "Petter A. Urkedal"
 homepage: "https://github.com/paurkedal/adpkg/"
 bug-reports: "https://github.com/paurkedal/adpkg/issues"
 license: "LGPL-3 with OCaml linking exception"
 doc: "http://paurkedal.github.io/adpkg/"
-dev-repo: "https://github.com/paurkedal/adpkg.git"
+dev-repo: "git+https://github.com/paurkedal/adpkg.git"
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
+  "ocaml"
   "ocamlbuild" {build}
   "topkg"
 ]
+synopsis: "Transitory Additions to Topkg"
+description: """
+Adpkg provides a few additions to the Topkg packaging system.  In particular
+it adds functionality to work with module lists, to avoid duplicating
+entries across `*.mllib` and `*.odocl` files and the `~api` argument of
+`Topkg.mllib`."""
+url {
+  src: "https://github.com/paurkedal/adpkg/tarball/v0.0.2"
+  checksum: "md5=83aed586ccb57aec8e92e1c52b81bcfd"
+}

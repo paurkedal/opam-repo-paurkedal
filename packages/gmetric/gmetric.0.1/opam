@@ -1,23 +1,28 @@
-opam-version: "1"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: [ "Petter A. Urkedal" ]
 license: "LGPL-3 with OCaml linking exception"
 build: [
   ["oasis" "setup"]
-  ["ocaml" "setup.ml" "-configure" "--prefix" prefix
-    "--%{lwt:enable}%-lwt"
-  ]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix "--%{lwt:enable}%-lwt"]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
+  ["ocaml" "setup.ml" "-doc"] {with-doc}
 ]
 remove: [
   ["ocamlfind" "remove" "gmetric"]
 ]
-build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
+  "ocaml"
   "oasis" {build}
   "ocamlfind" {build}
 ]
 depopts: [
   "lwt"
 ]
+synopsis: "Ganglia gmetric protocol"
+flags: light-uninstall
+url {
+  src: "https://github.com/paurkedal/ocaml-gmetric/tarball/0.1"
+  checksum: "md5=0e324f51ca2f46cc599d7c60299a7d7b"
+}

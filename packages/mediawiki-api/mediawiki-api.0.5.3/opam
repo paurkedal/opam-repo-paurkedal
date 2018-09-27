@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: [ "Petter A. Urkedal" ]
 license: "LGPL-3 with OCaml linking exception"
@@ -7,14 +7,15 @@ build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
+  ["ocaml" "setup.ml" "-doc"] {with-doc}
 ]
 remove: [
   ["ocamlfind" "remove" "mediawiki-api"]
   ["rm" "-f" "%{bin}%/mw-edit"]
   ["rm" "-f" "%{bin}%/mw-filter"]
 ]
-build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
+  "ocaml"
   "calendar"
   "cmdliner"
   "cohttp"
@@ -28,4 +29,11 @@ depends: [
   "ssl"
   "yojson"
 ]
-dev-repo: "https://github.com/paurkedal/ocaml-mediawiki-api.git"
+dev-repo: "git+https://github.com/paurkedal/ocaml-mediawiki-api.git"
+synopsis: "MediaWiki API"
+flags: light-uninstall
+url {
+  src:
+    "https://codeload.github.com/paurkedal/ocaml-mediawiki-api/tar.gz/0.5.3"
+  checksum: "md5=bb3e18b28d725b5eeb07a92c6343d35a"
+}

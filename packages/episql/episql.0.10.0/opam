@@ -1,16 +1,18 @@
-opam-version: "1.2"
+opam-version: "2.0"
 name: "episql"
 authors: ["Petter A. Urkedal"]
 maintainer: "paurkedal@gmail.com"
 homepage: "https://github.com/paurkedal/episql/"
 bug-reports: "https://github.com/paurkedal/episql/issues"
-dev-repo: "https://github.com/paurkedal/episql.git"
+dev-repo: "git+https://github.com/paurkedal/episql.git"
 license: "LGPL-3 with OCaml linking exception"
 
-build: [["jbuilder" "build" "-p" name "-j" jobs]]
-build-test: [["jbuilder" "runtest" "-p" name "-j" jobs]]
-
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+  ["jbuilder" "runtest" "-p" name "-j" jobs] {with-test}
+]
 depends: [
+  "ocaml"
   "jbuilder" {build}
   "topkg" {build}
   "topkg-jbuilder" {build}
@@ -19,3 +21,9 @@ depends: [
   "re"
   "xmlm"
 ]
+synopsis: "SQL schema parser and code generator"
+url {
+  src:
+    "https://github.com/paurkedal/episql/releases/download/v0.10.0/episql-0.10.0.tbz"
+  checksum: "md5=e2a7055a8a1f99c3151f9f3b4c3b9d20"
+}

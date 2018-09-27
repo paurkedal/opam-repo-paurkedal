@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: [ "Petter A. Urkedal" ]
 license: "GPL-3"
@@ -7,20 +7,25 @@ build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
+  ["ocaml" "setup.ml" "-doc"] {with-doc}
 ]
 remove: [
   ["ocamlfind" "remove" "iplogic"]
   ["rm" "-f" "%{bin}%/iplogic-compile"]
   ["rm" "-f" "%{bin}%/iplogic-depend"]
 ]
-build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
+  "ocaml"
   "bitpath"
   "oasis" {build}
   "ocamlfind" {build}
   "pcre"
   "prime"
 ]
-depopts: [
-]
-dev-repo: "https://github.com/paurkedal/iplogic.git"
+dev-repo: "git+https://github.com/paurkedal/iplogic.git"
+synopsis: "Firewall script generator"
+flags: light-uninstall
+url {
+  src: "https://codeload.github.com/paurkedal/iplogic/tar.gz/0.1"
+  checksum: "md5=859eed10e76c7b3752d2e6bffd1bb13e"
+}

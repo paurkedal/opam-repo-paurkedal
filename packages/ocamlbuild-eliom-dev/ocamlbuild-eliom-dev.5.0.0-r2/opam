@@ -1,4 +1,4 @@
-opam-version: "1.2"
+opam-version: "2.0"
 name: "ocamlbuild-eliom-dev"
 maintainer: "paurkedal@gmail.com"
 license: "LGPL-2.1 with OCaml linking exception"
@@ -8,7 +8,11 @@ build: [
   ["ocamlbuild" "-use-ocamlfind" "ocamlbuild_eliom.cmxs"]
 ]
 
-depends: [
-  "ocamlfind"
-  "js_of_ocaml"
+depends: ["ocaml" "ocamlfind" "js_of_ocaml"]
+extra-files: [
+  ["ocamlbuild_eliom.mli" "md5=26733662540b19e03d46ac6a0383ce11"]
+  ["ocamlbuild_eliom.ml" "md5=a31ef9a45064af3c55070583dcc5c9fc"]
+  ["ocamlbuild-eliom-dev.install" "md5=2789ee3662c25c8c2a6ef7cfb7cf6904"]
+  ["_tags" "md5=f7a71b3c136d384527e5716c952d9319"]
+  ["META" "md5=626832b1962eda63c566547796a508ee"]
 ]

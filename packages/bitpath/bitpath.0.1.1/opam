@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: [ "Petter A. Urkedal" ]
 license: "LGPL-3 with OCaml linking exception"
@@ -7,16 +7,21 @@ build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
+  ["ocaml" "setup.ml" "-doc"] {with-doc}
 ]
 remove: [
   ["ocamlfind" "remove" "bitpath"]
 ]
-build-doc: ["ocaml" "setup.ml" "-doc"]
 depends: [
+  "ocaml"
   "oasis" {build}
   "ocamlfind" {build}
   "ounit"
 ]
-depopts: [
-]
-dev-repo: "https://github.com/paurkedal/ocaml-bitpath.git"
+dev-repo: "git+https://github.com/paurkedal/ocaml-bitpath.git"
+synopsis: "Bit-strings and related structures"
+flags: light-uninstall
+url {
+  src: "https://codeload.github.com/paurkedal/ocaml-bitpath/tar.gz/0.1.1"
+  checksum: "md5=d85d6442386ac99427e91c24e3dfcaac"
+}

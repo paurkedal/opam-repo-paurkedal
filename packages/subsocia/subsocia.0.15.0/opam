@@ -1,12 +1,13 @@
-opam-version: "1.2"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: "Petter A. Urkedal"
 homepage: "https://github.com/paurkedal/subsocia/"
 bug-reports: "https://github.com/paurkedal/subsocia/issues"
 license: "LGPL-3 with OCaml linking exception"
-dev-repo: "https://github.com/paurkedal/subsocia.git"
+dev-repo: "git+https://github.com/paurkedal/subsocia.git"
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
+  "ocaml"
   "adpkg" {build}
   "caqti" {>= "0.6.0"}
   "caqti-lwt"
@@ -25,3 +26,9 @@ depends: [
   "uri"
   "yojson"
 ]
+synopsis: "People, organizational data, and access control"
+url {
+  src:
+    "https://github.com/paurkedal/subsocia/releases/download/v0.15.0/subsocia-0.15.0.tbz"
+  checksum: "md5=d0531c575d8e83bb3d106797378a35e6"
+}

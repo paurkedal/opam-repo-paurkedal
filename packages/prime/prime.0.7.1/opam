@@ -1,13 +1,20 @@
-opam-version: "1.2"
+opam-version: "2.0"
 maintainer: "paurkedal@gmail.com"
 authors: "Petter A. Urkedal"
 homepage: "https://github.com/paurkedal/ocaml-prime/"
 bug-reports: "https://github.com/paurkedal/ocaml-prime/issues"
 license: "LGPL-3 with OCaml linking exception"
-dev-repo: "https://github.com/paurkedal/ocaml-prime.git"
+dev-repo: "git+https://github.com/paurkedal/ocaml-prime.git"
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
+  "ocaml"
   "adpkg" {build}
   "ocamlbuild" {build}
   "topkg" {build}
 ]
+synopsis: "Basic additions to the OCaml Standard Library"
+url {
+  src:
+    "https://github.com/paurkedal/ocaml-prime/releases/download/0.7.1/prime-0.7.1.tbz"
+  checksum: "md5=bbe8ba7936fd7901e9e74e0a8ed27b3c"
+}

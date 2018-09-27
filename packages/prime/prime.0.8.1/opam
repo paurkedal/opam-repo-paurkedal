@@ -1,17 +1,24 @@
-opam-version: "1.2"
+opam-version: "2.0"
 name: "prime"
 authors: ["Petter A. Urkedal"]
 maintainer: "paurkedal@gmail.com"
 homepage: "https://github.com/paurkedal/ocaml-prime/"
 bug-reports: "https://github.com/paurkedal/ocaml-prime/issues"
-dev-repo: "https://github.com/paurkedal/ocaml-prime.git"
+dev-repo: "git+https://github.com/paurkedal/ocaml-prime.git"
 license: "LGPL-3 with OCaml linking exception"
 
-build: [["jbuilder" "build" "-p" name "-j" jobs]]
-build-test: [["jbuilder" "runtest" "-p" name "-j" jobs]]
-
-depends: [
-  "jbuilder" {build}
-  "ounit" {test}
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+  ["jbuilder" "runtest" "-p" name "-j" jobs] {with-test}
 ]
-available: [ocaml-version >= "4.02.3"]
+depends: [
+  "ocaml" {>= "4.02.3"}
+  "jbuilder" {build}
+  "ounit" {with-test}
+]
+synopsis: "Supplements to the OCaml standard library"
+url {
+  src:
+    "https://github.com/paurkedal/ocaml-prime/releases/download/v0.8.1/prime-0.8.1.tbz"
+  checksum: "md5=9e965b07f567fdf2fd2d672289f734b9"
+}
