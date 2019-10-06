@@ -16,7 +16,7 @@ depends: [
   "ocamlfind" {build}
   "prime"
   "topkg" {build}
-  "x509"
+  "x509" {< "0.7~"}
 ]
 synopsis: "In-House CA"
 url {
