@@ -1,0 +1,39 @@
+opam-version: "2.0"
+name: "episql"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3 with OCaml linking exception"
+homepage: "https://github.com/paurkedal/episql/"
+bug-reports: "https://github.com/paurkedal/episql/issues"
+depends: [
+  "ocaml"
+  "dune" {>= "1.9"}
+  "lwt"
+  "ppx_compose"
+  "prime"
+  "re"
+  "xmlm"
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+dev-repo: "git+https://github.com/paurkedal/episql.git"
+synopsis: "SQL schema parser and code generator"
+description: """
+epiSQL /ˈɛpɪˈsiːkwəl/ is an SQL schema parser and code generator.  It
+supports a subset of SQL `CREATE`-statements with focus on PostgreSQL.  It
+contains generators for
+
+  * [Caqti][], providing a persistence-style API with caching,
+  * XML, providing easy access for external applications to the schema, and
+  * Unix shells, providing a series of function calls for general ad-hoc use.
+"""
+url {
+  src:
+    "https://github.com/paurkedal/episql/releases/download/v0.11.2/episql-v0.11.2.tbz"
+  checksum: [
+    "sha256=9d60cccedde6769e25c96237a4441692f46e78f414e7de3b673347b7f72bf300"
+    "sha512=5652686ac3007858c571949462e426b798f37e81d550ce51b508409db4eac693c88a4a23412a55fdbe6876ba0e483deb267ff03b4843e9895ed15eb6f5d3e60a"
+  ]
+}
