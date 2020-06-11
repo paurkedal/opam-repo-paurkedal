@@ -1,0 +1,50 @@
+opam-version: "2.0"
+name: "subsocia"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3 with OCaml linking exception"
+homepage: "https://github.com/paurkedal/subsocia/"
+bug-reports: "https://github.com/paurkedal/subsocia/issues"
+depends: [
+  "caqti" {>= "1.2.0"}
+  "caqti-dynload"
+  "caqti-lwt"
+  "cmdliner"
+  "config-file"
+  "dune" {>= "1.1"}
+  "extunix"
+  "iso639"
+  "lwt"
+  "lwt_log"
+  "lwt_ppx"
+  "ocaml"
+  "ounit"
+  "prime"
+  "ptime"
+  "re"
+  "uri"
+  "yojson"
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+substs: "lib/subsocia_version.ml"
+dev-repo: "git+https://github.com/paurkedal/subsocia.git"
+synopsis: "People, organizational data, and access control"
+description: """
+Subsocia implements a data model for organizational data and access control
+based sub-classing and binary relations.  The sub-classing relation serves
+to build organizational hierarchies.  The binary relations allows
+associating attributes to an people relative to their different roles in the
+organization, in ways that would be ambiguous in the common directory model.
+"""
+doc: "http://paurkedal.github.io/subsocia/index.html"
+url {
+  src:
+    "https://github.com/paurkedal/subsocia/releases/download/v0.19.0/subsocia-v0.19.0.tbz"
+  checksum: [
+    "sha256=04c18994361a64f482ca8219b01da27458ef9d6e0ea1f8b723626ef497b7d848"
+    "sha512=72b4b9d901ce636f5e24d42102a4e9594e9d0125d5f5f572f660e240544ad651da099a31b89eaa3978e664c557fc179ae4f26c05d6f62677b9b79f6c0ac7d6a3"
+  ]
+}
