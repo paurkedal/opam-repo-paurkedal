@@ -10,7 +10,7 @@ depends: [
   "ocaml"
   "adpkg" {build}
   "eliom" {>= "5.0.0" & < "6.0.0"}
-  "js_of_ocaml"
+  "js_of_ocaml" {< "3.6~"}
   "lwt"
   "ocamlbuild" {build}
   "ocamlbuild-eliom-dev" {build}
