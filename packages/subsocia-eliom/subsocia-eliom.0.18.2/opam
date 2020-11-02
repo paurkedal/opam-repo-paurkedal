@@ -1,0 +1,46 @@
+opam-version: "2.0"
+name: "subsocia-eliom"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3 with OCaml linking exception"
+homepage: "https://github.com/paurkedal/subsocia-eliom/"
+bug-reports: "https://github.com/paurkedal/subsocia-eliom/issues"
+depends: [
+  "adpkg" {build}
+  "caqti"
+  "caqti-lwt"
+  "config-file"
+  "eliom" {>= "6.6" & < "7.0~"}
+  "fmt"
+  "js_of_ocaml" {>= "3.3"}
+  "js_of_ocaml-ppx"
+  "js_of_ocaml-ppx_deriving_json"
+  "lwt"
+  "lwt_log"
+  "lwt_ppx"
+  "logs"
+  "ocaml"
+  "ocamlbuild" {build}
+  "ocamlfind"
+  "panograph"
+  "prime"
+  "ptime"
+  "react"
+  "subsocia" {>= "0.18~"}
+  "topkg" {build}
+]
+build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
+dev-repo: "git+https://github.com/paurkedal/subsocia-eliom.git"
+synopsis: "Web interface for Subsocia running under ocsigenserver"
+
+synopsis: """Eliom-based web interface to Subsocia"""
+description: """\
+
+## Synopsis
+
+This package provides a basic web interface to browse a Subsocia
+organization and to edit subset relations between entities."""
+url {
+archive: "https://github.com/paurkedal/subsocia-eliom/releases/download/v0.18.2/subsocia-eliom-0.18.2.tbz"
+checksum: "6bb42f6b8b7fd9a30431053ef6baf6f2"
+}
