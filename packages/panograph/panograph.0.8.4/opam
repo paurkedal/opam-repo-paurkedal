@@ -1,0 +1,45 @@
+opam-version: "2.0"
+name: "panograph"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3 with OCaml linking exception"
+homepage: "https://github.com/paurkedal/panograph/"
+bug-reports: "https://github.com/paurkedal/panograph/issues"
+depends: [
+  "ocaml"
+  "adpkg" {build}
+  "eliom" {>= "6.6" & < "7.0~"}
+  "iso639"
+  "js_of_ocaml" {>= "3.5.1"}
+  "js_of_ocaml-compiler" {>= "3.5.1"}
+  "js_of_ocaml-lwt" {>= "3.5.1"}
+  "js_of_ocaml-ppx" {>= "3.5.1"}
+  "js_of_ocaml-ppx_deriving_json" {>= "3.5.1"}
+  "lwt"
+  "lwt_log"
+  "lwt_ppx"
+  "ocamlbuild" {build}
+  "ocamlfind" {build}
+  "ppx_compose"
+  "ppx_deriving"
+  "prime"
+  "react"
+  "topkg" {build}
+  "uucp"
+  "uutf"
+]
+build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
+dev-repo: "git+https://github.com/paurkedal/panograph.git"
+#synopsis: "An Assortment of Eliom Widgets"
+
+synopsis: """An Assortment of Eliom Widgets"""
+description: """\
+
+## Disclaimer
+
+This is a collection of experimental web components.  Some will be removed,
+others changed in backwards incompatible ways."""
+url {
+archive: "https://github.com/paurkedal/panograph/releases/download/v0.8.4/panograph-0.8.4.tbz"
+checksum: "f0fdf22b1a43f7641654d6d2bf954f1a"
+}
