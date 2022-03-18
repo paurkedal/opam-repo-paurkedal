@@ -21,5 +21,5 @@ depends: [
 synopsis: "XMPP protocol implementation"
 authors: "Anastasia Gornostaeva <ermine@sulci.ru>"
 url {
-  src: "git://github.com/paurkedal/erm_xmpp.git#dev"
+  src: "git+https://github.com/paurkedal/erm_xmpp.git#dev"
 }

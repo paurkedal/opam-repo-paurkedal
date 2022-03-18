@@ -16,5 +16,5 @@ depends: ["ocaml" "oasis"]
 synopsis: "Treap implementation"
 flags: light-uninstall
 url {
-  src: "git://github.com/ermine/treap.git"
+  src: "git+https://github.com/ermine/treap.git"
 }

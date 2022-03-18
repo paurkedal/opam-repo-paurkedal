@@ -19,5 +19,5 @@ depends: [
 synopsis: "XML stream parser"
 authors: "Anastasia Gornostaeva <ermine@sulci.ru>"
 url {
-  src: "git://github.com/paurkedal/erm_xml.git#dev"
+  src: "git+https://github.com/paurkedal/erm_xml.git#dev"
 }
