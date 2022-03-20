@@ -1,0 +1,33 @@
+opam-version: "2.0"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3.0-or-later WITH LGPL-3.0-linking-exception"
+homepage: "https://github.com/paurkedal/ocaml-prime/"
+doc: "https://paurkedal.github.io/ocaml-prime/index.html"
+bug-reports: "https://github.com/paurkedal/ocaml-prime/issues"
+depends: [
+  "extunix" {with-test}
+  "dune" {>= "1.1"}
+  "ocaml" {>= "4.07.0"}
+  "ounit" {with-test}
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+dev-repo: "git+https://github.com/paurkedal/ocaml-prime.git"
+synopsis: "Supplements to the OCaml standard library"
+description: """
+This is a small OCaml library, mostly adding functionality to existing types
+from the standard library.  The main focus is to amend the container
+structures in a uniform way, keeping functions as composable as possible.
+"""
+url {
+  src:
+    "https://github.com/paurkedal/ocaml-prime/releases/download/v0.9.3/prime-v0.9.3.tbz"
+  checksum: [
+    "sha256=4fc90aba555f605374728c6128f4caf2be2040c03593c9777a3f98c415a510da"
+    "sha512=a1899a7d4fa0e53fce21d2514171064b2405aafd9ffad7f979ba3d73dac4778d1a1f329d4932825bf31dd26f069cb5a52efdcf181b83d65fa8eb26fa6948da72"
+  ]
+}
+x-commit-hash: "14d27f45bed83a323a07de32cfd9d3327fe33643"
