@@ -1,0 +1,41 @@
+opam-version: "2.0"
+synopsis: "Experimental MediaWiki API client"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3 with OCaml linking exception"
+homepage: "https://github.com/paurkedal/ocaml-mediawiki-api/"
+bug-reports: "https://github.com/paurkedal/ocaml-mediawiki-api/issues"
+depends: [
+  "calendar"
+  "cmdliner"
+  "cohttp"
+  "cohttp-lwt"
+  "cohttp-lwt-unix"
+  "conduit"
+  "conduit-lwt"
+  "conduit-lwt-unix"
+  "dune"
+  "kojson"
+  "logs"
+  "lwt"
+  "lwt_ssl"
+  "ocaml"
+  "ppx_compose"
+  "prime"
+  "ssl"
+  "yojson"
+  "xdg-basedir"
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+dev-repo: "git+https://github.com/paurkedal/ocaml-mediawiki-api.git"
+url {
+  src:
+    "https://github.com/paurkedal/ocaml-mediawiki-api/releases/download/v0.6.0/mediawiki-api-v0.6.0.tbz"
+  checksum: [
+    "sha256=9bb670fe0f67eca9b1d559274fed0eab7a6985f60bf60dcff1cfb2df7a43d073"
+    "sha512=63458767ff64a80e9e63ca95a995772158764c5cfca1746fdacf98616b5e7712210762a0d11d64d864d0aa151d070b754b4f96393d56e425f678b6dbc2f474d1"
+  ]
+}
+x-commit-hash: "e047d7201fb5e46cf4401030c71a3e2db42d11dd"
