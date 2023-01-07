@@ -1,0 +1,28 @@
+opam-version: "2.0"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3 with OCaml linking exception"
+homepage: "https://github.com/paurkedal/ocaml-kojson/"
+bug-reports: "https://github.com/paurkedal/ocaml-kojson/issues"
+depends: [
+  "ocaml"
+  "dune" {>= "1.0"}
+  "ppx_compose"
+  "prime"
+  "yojson"
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+dev-repo: "git+https://github.com/paurkedal/ocaml-kojson.git"
+synopsis: "JSON parser combinators"
+url {
+  src:
+    "https://github.com/paurkedal/ocaml-kojson/releases/download/v0.4.0/kojson-v0.4.0.tbz"
+  checksum: [
+    "sha256=15562986cf2367289f0622182dc6f137d9f901669781bf411df8769afb44d11c"
+    "sha512=eb9be7a6979712b122b9e5d418ee3bcb8654c6a85c0c88c5ef0157bb9666bd449ae565fc57f20552b2f05e1d0e5ca73f2a1ed4a81e2f0b5c3b2d196b8f257a49"
+  ]
+}
+x-commit-hash: "22623460b248694fa3404e62c74abe994b4a6fc9"
