@@ -13,10 +13,10 @@ build: [
 depends: [
   "ocaml"
   "jbuilder" {build}
-  "caqti" {>= "0.8.1"}
-  "caqti-dynload" {with-test}
-  "caqti-lwt" {>= "0.8.1"}
-  "caqti-type-calendar" {>= "0.8.1"}
+  "caqti" {>= "0.8.1" & < "2.0.0~"}
+  "caqti-dynload" {with-test & < "2.0.0~"}
+  "caqti-lwt" {>= "0.8.1" & < "2.0.0~"}
+  "caqti-type-calendar" {>= "0.8.1" & < "2.0.0~"}
   "extunix"
   "lwt"
   "ppx_deriving" {build}

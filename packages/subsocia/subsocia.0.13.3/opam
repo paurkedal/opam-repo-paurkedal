@@ -9,7 +9,7 @@ build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
   "ocaml"
   "adpkg" {build}
-  "caqti" {< "0.6"}
+  "caqti" {< "0.6" & < "2.0.0~"}
   "cmdliner"
   "config-file"
   "eliom" {>= "5.0" & < "6.0"}
