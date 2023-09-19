@@ -1,0 +1,37 @@
+opam-version: "2.0"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3.0-or-later WITH LGPL-3.0-linking-exception"
+homepage: "https://github.com/paurkedal/episql/"
+bug-reports: "https://github.com/paurkedal/episql/issues"
+depends: [
+  "ocaml"
+  "dune" {>= "1.9"}
+  "caqti" {>= "2.0.1"}
+  "caqti-dynload" {with-test}
+  "caqti-lwt" {>= "2.0.1"}
+  "caqti-type-calendar" {>= "2.0.1"}
+  "extunix"
+  "lwt"
+  "ppx_deriving"
+  "prime"
+  "react"
+]
+conflicts: [
+  "episql" {< "0.9.0"}
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+dev-repo: "git+https://github.com/paurkedal/episql.git"
+synopsis: "Runtime support for epiSQL caqti-persist generator"
+url {
+  src:
+    "https://github.com/paurkedal/episql/releases/download/v0.15.0/episql-v0.15.0.tbz"
+  checksum: [
+    "sha256=ee605238fcd31c47e3f98eb9a8e9d5797c83265bfba53f4c3daa4baedbd012f7"
+    "sha512=acf2d2395121e965015f7bc6cf7dc8c9fa6d393c1c7403e1d571d1b1fe029c83ed8e4895b293452f5c1a18b35c5c70d9c8fb22290a4ecf600d18ee0bfe6407e6"
+  ]
+}
+x-commit-hash: "c0f7bdc361712c0d3a228e59ad0c8061ca4ff049"
