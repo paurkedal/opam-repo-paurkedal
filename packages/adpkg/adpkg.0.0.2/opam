@@ -9,7 +9,7 @@ dev-repo: "git+https://github.com/paurkedal/adpkg.git"
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
   "ocaml"
-  "ocamlbuild" {build}
+  "ocamlbuild" {!= "0.16.1" & build}
   "topkg"
 ]
 synopsis: "Transitory Additions to Topkg"
