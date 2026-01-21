@@ -1,0 +1,45 @@
+opam-version: "2.0"
+maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
+license: "LGPL-3.0-or-later WITH LGPL-3.0-linking-exception"
+homepage: "https://github.com/paurkedal/subsocia-eliom/"
+bug-reports: "https://github.com/paurkedal/subsocia-eliom/issues"
+depends: [
+  "caqti"
+  "caqti-lwt"
+  "confero"
+  "decoders-yojson"
+  "dune"
+  "eliom" {>= "8.9.0" & < "12.0.0~"}
+  "fmt"
+  "jose"
+  "js_of_ocaml" {>= "3.3"}
+  "js_of_ocaml-ppx"
+  "js_of_ocaml-ppx_deriving_json"
+  "lwt"
+  "logs"
+  "ocaml"
+  "panograph"
+  "prime"
+  "ptime"
+  "re"
+  "react"
+  "subsocia" {>= "0.18~"}
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs "@install"]
+  ["dune" "install" "-p" name "--create-install-file" name]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+  ["dune" "build" "@doc" "-p" name "-j" jobs] {with-doc}
+]
+dev-repo: "git+https://github.com/paurkedal/subsocia-eliom.git"
+synopsis: "Eliom module for Subsocia"
+url {
+  src:
+    "https://github.com/paurkedal/subsocia-eliom/releases/download/v0.22.0/subsocia-eliom-v0.22.0.tbz"
+  checksum: [
+    "sha256=8bf6912846f29bd4bbbf690e0ad6c58d5148509c667d42533cf6024f24a04087"
+    "sha512=7d20f49e6f5183234948dc1c28b2878677ce9dd1a82f5f39734a137020b7b096a7ef6ae8488fb136d94878e972c253a6f9f41240b3565e9a41fb15881e7ae711"
+  ]
+}
+x-commit-hash: "1529b147223ea896dced750ba3fc1caf831b7825"
