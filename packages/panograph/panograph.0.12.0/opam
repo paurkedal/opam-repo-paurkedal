@@ -8,7 +8,7 @@ bug-reports: "https://github.com/paurkedal/panograph/issues"
 depends: [
   "ocaml"
   "adpkg" {build}
-  "eliom" {>= "6.6" & < "12.0~"}
+  "eliom"
   "fmt"
   "iso639"
   "js_of_ocaml" {>= "3.5.1"}
