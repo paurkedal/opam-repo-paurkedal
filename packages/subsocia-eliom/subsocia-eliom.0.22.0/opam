@@ -10,7 +10,7 @@ depends: [
   "confero"
   "decoders-yojson"
   "dune"
-  "eliom" {>= "8.9.0" & < "12.0.0~"}
+  "eliom"
   "fmt"
   "jose"
   "js_of_ocaml" {>= "3.3"}
